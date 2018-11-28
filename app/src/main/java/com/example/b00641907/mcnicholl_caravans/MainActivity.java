@@ -1,12 +1,20 @@
 package com.example.b00641907.mcnicholl_caravans;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button Login;
     private int counter = 5;
     private TextView userRegistration;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -27,9 +36,18 @@ public class MainActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.etPassword);
         Info = (TextView) findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnSignIn);
-        userRegistration = (TextView)findViewById(R.id.tvRegister);
+        userRegistration = (TextView) findViewById(R.id.tvRegister);
 
         Info.setText("Attempts remaining: 5");
+
+        firebaseAuth = firebaseAuth.getInstance();
+
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        if (user != null) {
+            finish();
+            startActivity(new Intent(MainActivity.this, SecondActivity.class));
+        }
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,19 +66,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword) {
-        if ((userName.equals("Admin")) && (userPassword.equals("1234"))) {
-            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-            startActivity(intent);
-        } else {
-            counter--;
 
-            Info.setText("Amount of attempts remaining" + String.valueOf(counter));
+        firebaseAuth.createUserWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                } else {
+                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
 
-            if (counter == 0) {
-                Login.setEnabled(false);
+                }
+
+
             }
 
-        }
 
+        });
     }
 }

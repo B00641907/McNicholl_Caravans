@@ -39,15 +39,21 @@ public class RegistrationActivity extends AppCompatActivity {
                     String user_email = userEmail.getText().toString().trim();
                     String user_password = userPassword.getText().toString().trim();
 
-                    firebaseAuth.createUserWithEmailAndPassword(user_email, user_password) .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()){
+                                //sendUserData();
+                                firebaseAuth.signOut();
+
                                 Toast.makeText(RegistrationActivity.this, "You have Registered Successfully", Toast.LENGTH_SHORT) .show();
+                                finish();
                                 startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "You Failed to Register", Toast.LENGTH_SHORT) .show();
+
+
                             }
 
                         }
@@ -66,10 +72,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void setupUIViews() {
         userName = (EditText) findViewById(R.id.etUsername);
-        userPassword = (EditText) findViewById(R.id.etPassword);
+        userPassword = (EditText) findViewById(R.id.etUserPassword);
         userEmail = (EditText) findViewById(R.id.etUserEmail);
         regButton = (Button) findViewById(R.id.btnRegister);
-        userLogIn = (TextView) findViewById(R.id.tvUserLogIn);
+        userLogIn = (TextView) findViewById(R.id.tvUserLogin);
     }
     //validation so all information is entered correctly
 

@@ -19,6 +19,10 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ParksActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBEhoQsQXXmWe9qoHFS3u8eAx0ESqCCSR0"/>
     </application>
 
 </manifest>

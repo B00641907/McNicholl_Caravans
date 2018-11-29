@@ -1,5 +1,6 @@
 package com.example.b00641907.mcnicholl_caravans;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private int counter = 5;
     private TextView userRegistration;
     private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
+
 
 
     @Override
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Info.setText("Attempts remaining: 5");
 
         firebaseAuth = firebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(this);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
@@ -67,13 +71,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String userName, String userPassword) {
 
-        firebaseAuth.createUserWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        progressDialog.setMessage("Please wait until you are verified");
+        progressDialog.show();
+
+        firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    progressDialog.dismiss();
+                    Toast.makeText(MainActivity.this, "You have logged in successfully.", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(MainActivity.this, SecondActivity.class));
                 } else {
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "You have failed to login.", Toast.LENGTH_SHORT).show();
+                    counter--;
+                    Info.setText("Attempts Remaining" + counter);
+                    progressDialog.dismiss();
+                    if (counter == 0) {
+                        Login.setEnabled(false);
+                    }
 
                 }
 

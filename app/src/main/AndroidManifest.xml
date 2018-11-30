@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.b00641907.mcnicholl_caravans">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBEhoQsQXXmWe9qoHFS3u8eAx0ESqCCSR0" />
@@ -34,12 +31,10 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ParksActivity" />
-
-
-
-        <activity android:name=".MapActivity">
-
-        </activity>
+        <activity android:name=".MapActivity"></activity>
+        <activity
+            android:name=".GMapsActivity"
+            android:label="@string/title_activity_gmaps"></activity>
     </application>
 
 </manifest>

@@ -25,8 +25,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     //Checking that user has google play services installed on the device so the app can run the Google Maps and places feature successfully.
-    private static final String TAG = "MainActivity";
-    private static final int ERROR_DIALOG_REQUEST = 9001;
+    //private static final String TAG = "MainActivity";
+   // private static final int ERROR_DIALOG_REQUEST = 9001;
 
     private EditText Name;
     private EditText Password;
@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(isServicesOK()){
-            init();
-        }
+       // if(isServicesOK()){
+            //init();
+       // }
 
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
@@ -84,29 +84,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void init(){
+   // private void init(){
 
-    }
+   // }
 
-    public boolean isServicesOK(){
-        Log.d(TAG, "isServicesOK: checking google services version");
+    //public boolean isServicesOK(){
+      //  Log.d(TAG, "isServicesOK: checking google services version");
 
-        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
-        if(available == ConnectionResult.SUCCESS){
+       // int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
+        // if(available == ConnectionResult.SUCCESS){
             //EVERYTHING IS FINE AND THE USER CAN MAKE MAP REQUESTS
-            Log.d(TAG, "isServicesOK: Google Play Services is working");
-            return true;
-        }
-        else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
+           // Log.d(TAG, "isServicesOK: Google Play Services is working");
+           // return true;
+        //}
+       // else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
             //an error has occured but it can be resolved
-            Log.d(TAG, "isServicesOk: and error occured but it can be resolved");
-            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(MainActivity.this, available, ERROR_DIALOG_REQUEST);
-            dialog.show();
-        }else{
-            Toast.makeText(this, "You can't make app requests", Toast.LENGTH_SHORT).show();
-        }
-        return false;
-    }
+           // Log.d(TAG, "isServicesOk: and error occured but it can be resolved");
+           // Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(MainActivity.this, available, ERROR_DIALOG_REQUEST);
+          //  dialog.show();
+       // }else{
+          //  Toast.makeText(this, "You can't make app requests", Toast.LENGTH_SHORT).show();
+       // }
+        //return false;
+    //}
 
     private void validate(String userName, String userPassword) {
 

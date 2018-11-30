@@ -18,4 +18,12 @@
 
     </item>
 
+    <item
+        android:id="@+id/GMapsMenu"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        android:title="Maps">
+
+    </item>
+
 </menu>

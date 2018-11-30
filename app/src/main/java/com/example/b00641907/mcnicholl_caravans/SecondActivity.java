@@ -46,6 +46,11 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(new Intent(SecondActivity.this, ParksActivity.class));
     }
 
+    private void Maps(){
+
+        startActivity(new Intent(SecondActivity.this, GMapsActivity.class));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
@@ -61,6 +66,9 @@ public class SecondActivity extends AppCompatActivity {
                 return true;
             case R.id.ParksMenu:
                 Parks();
+                return true;
+            case R.id.GMapsMenu:
+                Maps();
                 return true;
 
         }

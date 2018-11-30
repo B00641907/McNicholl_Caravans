@@ -1,9 +1,10 @@
-package com.example.b00641907.mcnicholl_caravans;
+/*package com.example.b00641907.mcnicholl_caravans;
 
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     private static final String TAG = "MapActivity";
+
     private  static final  String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATE_PERMISSION_REQUEST_CODE = 12345;
@@ -35,7 +37,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private GoogleMap gMap;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
@@ -80,26 +82,26 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         Log.d(TAG, "onRequestPermissionsResult: called");
         LocatePermissionsGranted = false;
 
-        switch(requestCode){
-            case LOCATE_PERMISSION_REQUEST_CODE:{
-                if (grantResults.length > 0){
-                    for (int i = 0; i <grantResults.length; i++){
-                        if(grantResults[i] != PackageManager.PERMISSION_GRANTED){
+        switch (requestCode) {
+            case LOCATE_PERMISSION_REQUEST_CODE: {
+                if (grantResults.length > 0) {
+                    for (int i = 0; i < grantResults.length; i++) {
+                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                             LocatePermissionsGranted = false;
                             Log.d(TAG, "onRequestPermissionsResult: Permission has failed");
                             return;
 
                         }
                     }
-                }
-                Log.d(TAG, "onRequestPermissionsResult: Permission has been granted");
-                        LocatePermissionsGranted =true;
-                    //loop to start map
-                initMap();
 
+                    Log.d(TAG, "onRequestPermissionsResult: Permission has been granted");
+                    LocatePermissionsGranted = true;
+                    //loop to start map
+                    initMap();
+
+                }
             }
         }
+
     }
-
-
-}
+}*/

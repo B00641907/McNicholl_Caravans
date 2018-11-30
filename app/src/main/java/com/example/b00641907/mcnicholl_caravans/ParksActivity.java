@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import static android.os.Build.VERSION_CODES.P;
 
@@ -18,6 +19,17 @@ public class ParksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parks);
 
+    }
+
+    private void init(){
+        Button btnMap = (Button) findViewById(R.id.btnMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ParksActivity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

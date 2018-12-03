@@ -31,10 +31,10 @@
         <activity android:name=".SecondActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ParksActivity" />
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
         <activity
-            android:name=".GMapsActivity"
-            android:label="@string/title_activity_gmaps"></activity>
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

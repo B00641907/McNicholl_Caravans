@@ -24,9 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Checking that user has google play services installed on the device so the app can run the Google Maps and places feature successfully.
-    //private static final String TAG = "MainActivity";
-   // private static final int ERROR_DIALOG_REQUEST = 9001;
+    //Creating variables for all widgets created on the xml page.
 
     private EditText Name;
     private EditText Password;
@@ -48,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             //init();
        // }
 
+        //Assigning variables an respective id.
         Name = (EditText) findViewById(R.id.etName);
         Password = (EditText) findViewById(R.id.etPassword);
         Info = (TextView) findViewById(R.id.tvInfo);
@@ -107,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
        // }
         //return false;
     //}
+
+    // Function for validating if details entered are correct by matching them with the details registered in the database.
 
     private void validate(String userName, String userPassword) {
 

@@ -13,7 +13,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SecondActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    private Button signout;
+    private Button signout,maps2;
+
 
 
     @Override
@@ -23,12 +24,21 @@ public class SecondActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         signout = (Button)findViewById(R.id.btnSignOut);
+        maps2 = (Button)findViewById(R.id.btnMaps);
 
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Signout();
 
+            }
+        });
+
+        maps2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openMap = new Intent(SecondActivity.this, MapsActivity.class);
+                SecondActivity.this.startActivity(openMap);
             }
         });
 
@@ -48,7 +58,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private void Maps(){
 
-        startActivity(new Intent(SecondActivity.this, GMapsActivity.class));
+       // startActivity(new Intent(SecondActivity.this, GMapsActivity.class));
     }
 
     @Override

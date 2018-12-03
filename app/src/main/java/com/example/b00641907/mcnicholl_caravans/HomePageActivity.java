@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SecondActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private Button signout,maps2;
@@ -20,12 +20,14 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_home_page);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        //Assigning variables a respective id.
         signout = (Button)findViewById(R.id.btnSignOut);
         maps2 = (Button)findViewById(R.id.btnMaps);
 
+        //Buttons on homepage. Maps button loads GoogleMaps API. Signout returns to SignIn page.
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,30 +38,27 @@ public class SecondActivity extends AppCompatActivity {
 
         maps2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent openMap = new Intent(SecondActivity.this, MapsActivity.class);
-                SecondActivity.this.startActivity(openMap);
+           public void onClick(View view) {
+                Intent openMap = new Intent(HomePageActivity.this, MapsActivity.class);
+                HomePageActivity.this.startActivity(openMap);
             }
         });
 
 
     }
-
+    //List and Signout options at the top of the home page. Possibility of being used as navigation.
     private void Signout(){
         firebaseAuth.signOut();
         finish();
-        startActivity(new Intent(SecondActivity.this, MainActivity.class));
+        startActivity(new Intent(HomePageActivity.this, SignInActivity.class));
     }
 
     private void Parks(){
 
-        startActivity(new Intent(SecondActivity.this, ParksActivity.class));
+        startActivity(new Intent(HomePageActivity.this, ParksActivity.class));
     }
 
-    private void Maps(){
 
-       // startActivity(new Intent(SecondActivity.this, GMapsActivity.class));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,9 +76,7 @@ public class SecondActivity extends AppCompatActivity {
             case R.id.ParksMenu:
                 Parks();
                 return true;
-            case R.id.GMapsMenu:
-                Maps();
-                return true;
+
 
         }
         return super.onOptionsItemSelected(item);

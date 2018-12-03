@@ -49,7 +49,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                                 Toast.makeText(RegistrationActivity.this, "You have Registered Successfully", Toast.LENGTH_SHORT) .show();
                                 finish();
-                                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                                startActivity(new Intent(RegistrationActivity.this, SignInActivity.class));
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "You Failed to Register", Toast.LENGTH_SHORT) .show();
 
@@ -65,7 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
         userLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                startActivity(new Intent(RegistrationActivity.this, SignInActivity.class));
             }
         });
     }

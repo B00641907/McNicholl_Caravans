@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePageActivity extends AppCompatActivity {
 
+    //Creating variables for all widgets created on the xml page along with the database.
     private FirebaseAuth firebaseAuth;
     private Button signout,maps2;
 
@@ -46,6 +47,12 @@ public class HomePageActivity extends AppCompatActivity {
 
 
     }
+    //Creating the menu at the top of the home page.
+    @Override
+    public boolean onCreateOptionsMenu(Menu nav) {
+        getMenuInflater().inflate(R.menu.menu,nav);
+        return true;
+    }
     //List and Signout options at the top of the home page. Possibility of being used as navigation.
     private void Signout(){
         firebaseAuth.signOut();
@@ -60,13 +67,9 @@ public class HomePageActivity extends AppCompatActivity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
 
 
+    //Linking the menu options to the required pages.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

@@ -38,7 +38,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // All of this code is automatically implemented when adding the google maps activity feature
+        //The changes I made are below for when users open the app it will focus on McNicholl Caravans
+        //location
         LatLng McNichollCaravans = new LatLng(54.701580, -6.587882);
         mMap.addMarker(new MarkerOptions().position(McNichollCaravans).title("McNicholl Caravans"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(McNichollCaravans));

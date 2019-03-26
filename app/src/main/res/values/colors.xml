@@ -3,4 +3,34 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="semiwhite">#80ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="app_blue">#107AE7</color>
+    <color name="app_red">#f41105</color>
+    <color name="app_grey">#676767</color>
+    <color name="app_grey_dark">#3d3d3d</color>
+    <color name="app_grey_light">#d8d8d8</color>
+    <color name="app_grey_light_cheap">#80d8d8d8</color>
+
+    <color name="app_divider">#80BFBFBF</color>
+    <color name="green">#d78825</color>
+
+    <!-- Barcode QRcode -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_border">#ffafed44</color>
+
+    <color name="actionbar_opacity">#33000000</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#E040FB</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
 </resources>

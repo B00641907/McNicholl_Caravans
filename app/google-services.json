@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "518209417563",
+    "firebase_url": "https://mcnichollcaravans.firebaseio.com",
+    "project_id": "mcnichollcaravans",
+    "storage_bucket": "mcnichollcaravans.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518209417563:android:db617e46aa1cfe98",
+        "android_client_info": {
+          "package_name": "com.example.b00641907.mcnicholl_caravans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518209417563-ukhsela2kcni3sag4lnntffu2j7aut8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC75_YN2PewEiA5jTV0RdVlOfw0kV0Ak5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

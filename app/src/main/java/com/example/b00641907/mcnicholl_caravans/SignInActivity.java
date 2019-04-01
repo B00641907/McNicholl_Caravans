@@ -59,7 +59,7 @@ public class SignInActivity extends BaseActivity {
         firebaseAuth = firebaseAuth.getInstance();
 
 
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
         //Checking information entered by user to verify with database to grant access or not.
         // Checking User Status

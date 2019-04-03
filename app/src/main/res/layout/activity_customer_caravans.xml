@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".CustomerHomeActivity">
+
+    <FrameLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/padding2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.example.b00641907.mcnicholl_caravans.view.ResizableImageView
+            android:id="@+id/resizableImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo" />
+
+        <com.example.b00641907.mcnicholl_caravans.view.ResizableImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_backbtn" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/padding3"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ListView
+        android:id="@+id/lvData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/padding3"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="@dimen/padding2" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding3"
+        android:layout_marginLeft="@dimen/padding3"
+        android:layout_marginTop="@dimen/padding2"
+        android:layout_marginEnd="@dimen/padding3"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/padding3"
+        android:layout_marginBottom="@dimen/padding3"
+        android:padding="@dimen/padding1"
+        android:text="* Customers can only take a Maximum of 2 bottles of Gas *"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_6" />
+
+</LinearLayout>

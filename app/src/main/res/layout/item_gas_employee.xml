@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding2"
+    app:cardCornerRadius="@dimen/padding2"
+    app:contentPadding="@dimen/padding3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivGas"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_gas_sample" />
+
+        <com.example.b00641907.mcnicholl_caravans.view.OpenSansBoldTextView
+            android:id="@+id/tvGasTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding2"
+            android:paddingRight="@dimen/padding2"
+            android:text="MP RE-CON"
+            android:textColor="@color/app_grey_dark"
+            android:textSize="@dimen/font_3" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/padding1"
+            android:layout_marginBottom="@dimen/padding1"
+            android:background="@color/app_grey_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/padding2"
+                android:paddingRight="@dimen/padding2"
+                android:text="2,500/-"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/font_5" />
+
+            <ImageView
+                android:id="@+id/btnEdit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/padding2"
+                android:background="@drawable/selector_item_action_blue"
+                android:padding="@dimen/padding2"
+                android:src="@drawable/ic_item_edit" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

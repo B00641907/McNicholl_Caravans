@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.b00641907.mcnicholl_caravans.adapter.CustomerCaravansListAdapter;
 import com.example.b00641907.mcnicholl_caravans.constant.FireBaseConstants;
+import com.example.b00641907.mcnicholl_caravans.model.CaravanInfo;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

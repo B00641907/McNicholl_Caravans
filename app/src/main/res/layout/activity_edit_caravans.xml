@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="@dimen/padding4"
+    tools:context=".NewGasActivity">
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansEditText
+        android:id="@+id/edtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding1"
+        android:background="@drawable/bg_input_field"
+        android:hint="@string/hint_caravan_name"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/semiwhite"
+        android:textSize="@dimen/font_5" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansEditText
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/padding2"
+        android:background="@drawable/bg_input_field"
+        android:gravity="left|top"
+        android:hint="@string/hint_caravan_description"
+        android:inputType="text"
+        android:padding="7dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/white"
+        android:textColorHint="@color/semiwhite"
+        android:textSize="@dimen/font_5" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansEditText
+        android:id="@+id/edtPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding2"
+        android:background="@drawable/bg_input_field"
+        android:hint="@string/hint_caravan_price"
+        android:inputType="numberDecimal"
+        android:padding="7dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/semiwhite"
+        android:textSize="@dimen/font_5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding4"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.b00641907.mcnicholl_caravans.view.OpenSansBoldTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="- Caravan Images -"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_4" />
+
+        <com.example.b00641907.mcnicholl_caravans.view.ResizableImageView
+            android:id="@+id/btnAddImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/selector_addbtn" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/padding1"
+        android:background="@color/white"/>
+
+    <ListView
+        android:id="@+id/lvImages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding3"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="@dimen/padding2" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding1"
+        android:background="@drawable/selector_whiteround"
+        android:text="@string/title_edit_caravan"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_4" />
+</LinearLayout>

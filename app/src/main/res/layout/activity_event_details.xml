@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".NewGasActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivEvent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_placeholder"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#a0f01d58"
+            android:gravity="center">
+
+            <com.example.b00641907.mcnicholl_caravans.view.OpenSansBoldTextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/padding2"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:text="Event Name"
+                android:ellipsize="marquee"
+                android:textSize="@dimen/font_5" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding4"
+            android:orientation="vertical">
+
+            <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thursday 6th June 2019 01:00pm for 45 minutes"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:textSize="@dimen/font_7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/padding3"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_marginRight="@dimen/padding3"
+                android:background="@color/semiwhite"/>
+
+            <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+                android:id="@+id/tvDescrpition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:text="Event Description Here"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

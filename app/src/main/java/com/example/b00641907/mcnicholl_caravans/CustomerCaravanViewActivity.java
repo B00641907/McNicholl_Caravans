@@ -8,8 +8,12 @@ import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.b00641907.mcnicholl_caravans.adapter.GalleryPageAdapter;
 import com.example.b00641907.mcnicholl_caravans.model.CaravanInfo;
 import com.google.firebase.auth.FirebaseAuth;
+
+
+
 
 import java.util.List;
 

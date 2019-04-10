@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:padding="35dp"
+    android:orientation="vertical" >
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/choose_action"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/choosephoto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/choose_photo"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/takephoto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/take_photo"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_blueround"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

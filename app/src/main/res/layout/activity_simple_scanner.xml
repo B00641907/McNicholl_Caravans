@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/TransparentToolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="20dp">
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="320dp"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#536083"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Touch for Scan"
+                android:textColor="#00ff00"
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

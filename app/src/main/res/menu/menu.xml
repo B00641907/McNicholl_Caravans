@@ -18,13 +18,7 @@
 
     </item>
 
-    <item
-        android:id="@+id/BarcodeReader"
-        android:orderInCategory="300"
-        app:showAsAction="never"
-        android:title="Barcode Reader">
 
-    </item>
 
 
 

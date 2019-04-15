@@ -7,13 +7,35 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.b00641907.mcnicholl_caravans.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -21,20 +43,132 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBEhoQsQXXmWe9qoHFS3u8eAx0ESqCCSR0" />
 
-        <activity android:name=".SignInActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePageActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".ParksActivity" />
-        <activity android:name=".MapActivity" />
+
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar" />
+
+        <activity
+            android:name=".CustomerHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".EmployeeHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ParksActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar" />
+
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".FullScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppOverlayTheme"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <activity
+            android:name=".CustomerGasOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".CustomerCaravansActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".CustomerCaravanViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".CustomerEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".EventDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EmployeeGasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".NewGasActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_new_gas"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EditGasActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_edit_gas"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EmployeeCaravansActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".NewCaravanActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_new_caravan"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EditCaravanActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_edit_caravan"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EmployeeEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".NewEventActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_add_event"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".EditEventActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_update_event"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

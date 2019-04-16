@@ -10,7 +10,12 @@ import android.widget.TextView;
 
 import com.example.b00641907.mcnicholl_caravans.adapter.GalleryPageAdapter;
 import com.example.b00641907.mcnicholl_caravans.model.CaravanInfo;
+import com.example.b00641907.mcnicholl_caravans.view.PageNavigator;
 import com.google.firebase.auth.FirebaseAuth;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 
 

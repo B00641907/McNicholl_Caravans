@@ -11,6 +11,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.b00641907.mcnicholl_caravans.EditEventActivity;
+import com.example.b00641907.mcnicholl_caravans.EmployeeEventActivity;
+import com.example.b00641907.mcnicholl_caravans.R;
+import com.example.b00641907.mcnicholl_caravans.model.EventInfo;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+
 import java.util.List;
 
 public class EmployeeEventListAdapter extends BaseAdapter {

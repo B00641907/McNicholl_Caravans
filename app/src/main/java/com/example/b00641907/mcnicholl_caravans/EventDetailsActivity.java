@@ -9,6 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.b00641907.mcnicholl_caravans.model.EventInfo;
+import com.example.b00641907.mcnicholl_caravans.view.PageNavigator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 public class EventDetailsActivity extends BaseActivity {
 

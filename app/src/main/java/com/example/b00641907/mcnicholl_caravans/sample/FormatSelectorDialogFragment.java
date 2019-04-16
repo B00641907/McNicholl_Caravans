@@ -6,6 +6,9 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
+import com.example.b00641907.mcnicholl_caravans.zxing.ZXingScannerView;
+import com.google.zxing.BarcodeFormat;
+
 import java.util.ArrayList;
 
 public class FormatSelectorDialogFragment extends DialogFragment {

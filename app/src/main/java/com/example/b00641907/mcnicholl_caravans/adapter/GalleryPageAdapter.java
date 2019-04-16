@@ -3,6 +3,10 @@ package com.example.b00641907.mcnicholl_caravans.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import com.example.b00641907.mcnicholl_caravans.fragment.GalleryFragment;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 
 import java.util.List;
 

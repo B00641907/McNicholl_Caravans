@@ -9,6 +9,20 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.util.Log;
 
+import com.example.b00641907.mcnicholl_caravans.core.BarcodeScannerView;
+import com.example.b00641907.mcnicholl_caravans.core.DisplayUtils;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.LuminanceSource;
+import com.google.zxing.MultiFormatReader;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.PlanarYUVLuminanceSource;
+import com.google.zxing.ReaderException;
+import com.google.zxing.Result;
+import com.google.zxing.common.HybridBinarizer;
+
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumMap;

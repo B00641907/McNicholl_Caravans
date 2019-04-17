@@ -5,15 +5,24 @@ import android.os.Parcelable;
 
 public class GasInfo implements Parcelable {
 
-    // Variable Name and Function Name
+    public static final Creator<GasInfo> CREATOR = new Creator<GasInfo>() {
+        @Override
+        public GasInfo createFromParcel(Parcel in) {
+            return new GasInfo(in);
+        }
+
+        @Override
+        public GasInfo[] newArray(int size) {
+            return new GasInfo[size];
+        }
+    };
+    /*** Don't Change Variable Name and Function Name ***/
     private String image;
     private String reference;
     private String name, description;
     private int weightPerBox, pricePerBox;
-    private int amountSelected;
-
+    public int amountSelected;
     private int lock;
-
     private String key;
 
     public GasInfo() {
@@ -40,22 +49,11 @@ public class GasInfo implements Parcelable {
         key = in.readString();
     }
 
-    public static final Creator<GasInfo> CREATOR = new Creator<GasInfo>() {
-        @Override
-        public GasInfo createFromParcel(Parcel in) {
-            return new GasInfo(in);
-        }
-
-        @Override
-        public GasInfo[] newArray(int size) {
-            return new GasInfo[size];
-        }
-    };
-
     // Gas Image
     public String getImage() {
         return image;
     }
+
     public void setImage(String image) {
         this.image = image;
     }
@@ -64,6 +62,7 @@ public class GasInfo implements Parcelable {
     public String getReference() {
         return reference;
     }
+
     public void setReference(String reference) {
         this.reference = reference;
     }
@@ -72,6 +71,7 @@ public class GasInfo implements Parcelable {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -80,6 +80,7 @@ public class GasInfo implements Parcelable {
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -88,6 +89,7 @@ public class GasInfo implements Parcelable {
     public int getWeightPerBox() {
         return weightPerBox;
     }
+
     public void setWeightPerBox(int weightPerBox) {
         this.weightPerBox = weightPerBox;
     }
@@ -96,6 +98,7 @@ public class GasInfo implements Parcelable {
     public int getPricePerBox() {
         return pricePerBox;
     }
+
     public void setPricePerBox(int pricePerBox) {
         this.pricePerBox = pricePerBox;
     }
@@ -104,6 +107,7 @@ public class GasInfo implements Parcelable {
     public int getSelectedCnt() {
         return amountSelected;
     }
+
     public void setSelectedCnt(int amountSelected) {
         this.amountSelected = amountSelected;
     }
@@ -112,6 +116,7 @@ public class GasInfo implements Parcelable {
     public int getLock() {
         return lock;
     }
+
     public void setLock(int lock) {
         this.lock = lock;
     }
@@ -120,6 +125,7 @@ public class GasInfo implements Parcelable {
     public String retrieveNodeKey() {
         return key;
     }
+
     public void saveNodeKey(String key) {
         this.key = key;
     }

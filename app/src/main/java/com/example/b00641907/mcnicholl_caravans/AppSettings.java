@@ -9,14 +9,20 @@ import com.example.b00641907.mcnicholl_caravans.model.UserInfo;
 
 public class AppSettings {
     private static final String APP_SHARED_PREFS = "k_prefs";
+    public  static final String FIREBASE_TOKEN = "firebase_token";
     private SharedPreferences appSharedPrefs;
     private Editor prefsEditor;
+    private String firebaseToken;
 
 
 
     public AppSettings(Context context) {
         this.appSharedPrefs = context.getSharedPreferences(APP_SHARED_PREFS, Activity.MODE_PRIVATE);
         this.prefsEditor = appSharedPrefs.edit();
+    }
+    public void putString(String key, String value) {
+        prefsEditor.putString(key, value);
+        prefsEditor.commit();
     }
 
     public void clear(){
@@ -51,5 +57,9 @@ public class AppSettings {
         user.uRole = appSharedPrefs.getString(USER_ROLE,"");
         return user;
     }
+    public String getFirebaseToken() {
+        return appSharedPrefs.getString(FIREBASE_TOKEN,"");
+    }
 }
 }
+

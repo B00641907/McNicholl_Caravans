@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/padding2"
+    app:cardCornerRadius="@dimen/padding2"
+    app:contentPadding="@dimen/padding3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.example.b00641907.mcnicholl_caravans.view.OpenSansBoldTextView
+            android:id="@+id/tvCaravanTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding1"
+            tools:text="Caravan Title"
+            android:textStyle="bold"
+            android:textColor="@color/app_grey_dark"
+            android:textSize="@dimen/font_5" />
+
+        <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+            android:id="@+id/meeting_with"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding1"
+            tools:text="Meeting with Sandeep dubey (sandeepdubey@gmail.com)"
+            android:textColor="@color/app_grey"
+            android:textSize="@dimen/font_8" />
+
+        <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+            android:id="@+id/meeting_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding1"
+            tools:text="Scheduled for : 23 january 2019 05:55 PM"
+            android:textColor="@color/app_grey"
+            android:textSize="@dimen/font_8" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

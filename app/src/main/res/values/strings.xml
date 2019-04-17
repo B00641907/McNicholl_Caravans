@@ -103,4 +103,5 @@
     <string name="error_select_event_image">Please choose Event image</string>
     <string name="success_add_new_event">Successfully added new Event Information.</string>
     <string name="success_update_event">Successfully updated Event Information.</string>
+    <string name="title_meeting_list">Meeting List</string>
 </resources>

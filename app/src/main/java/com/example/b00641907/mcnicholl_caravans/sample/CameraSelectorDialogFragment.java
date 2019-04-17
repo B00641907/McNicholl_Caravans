@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import com.example.b00641907.mcnicholl_caravans.R;
 
 public class CameraSelectorDialogFragment extends DialogFragment {
     public interface CameraSelectorDialogListener {

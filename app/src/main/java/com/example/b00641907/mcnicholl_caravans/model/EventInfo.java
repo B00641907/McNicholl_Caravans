@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class EventInfo implements Parcelable {
 
-    /*** Don't Change Variable Name and Function Name ***/
+
 
     private String image;
     private String name, description;

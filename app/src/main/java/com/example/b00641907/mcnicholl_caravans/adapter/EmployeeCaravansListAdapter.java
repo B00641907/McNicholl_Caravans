@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.b00641907.mcnicholl_caravans.R;
 import com.example.b00641907.mcnicholl_caravans.EditCaravanActivity;
 import com.example.b00641907.mcnicholl_caravans.EmployeeCaravansActivity;
 import com.example.b00641907.mcnicholl_caravans.model.CaravanInfo;

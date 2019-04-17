@@ -104,4 +104,7 @@
     <string name="success_add_new_event">Successfully added new Event Information.</string>
     <string name="success_update_event">Successfully updated Event Information.</string>
     <string name="title_meeting_list">Meeting List</string>
+
+    <integer name="viewfinder_border_width">4</integer>
+    <integer name="viewfinder_border_length">60</integer>
 </resources>

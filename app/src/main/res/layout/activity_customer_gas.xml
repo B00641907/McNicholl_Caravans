@@ -12,11 +12,11 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="@dimen/padding2"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/padding2"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -32,8 +32,8 @@
             android:id="@+id/btnBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/selector_backbtn" />
 
@@ -51,11 +51,11 @@
         android:id="@+id/lvGas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="@dimen/padding3"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/padding3"
         android:layout_weight="1"
         android:divider="@null"
         android:dividerHeight="@dimen/padding2" />
@@ -64,15 +64,28 @@
         android:id="@+id/tvHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding3"
-        android:layout_marginLeft="@dimen/padding3"
-        android:layout_marginTop="@dimen/padding2"
-        android:layout_marginEnd="@dimen/padding3"
-        android:layout_marginRight="@dimen/padding3"
         android:layout_marginBottom="@dimen/padding3"
+        android:layout_marginEnd="@dimen/padding3"
+        android:layout_marginLeft="@dimen/padding3"
+        android:layout_marginRight="@dimen/padding3"
+        android:layout_marginStart="@dimen/padding3"
+        android:layout_marginTop="@dimen/padding2"
         android:padding="@dimen/padding1"
         android:text="* Customers can only take a Maximum of 2 bottles of Gas *"
         android:textColor="@color/white"
         android:textSize="@dimen/font_6" />
+
+    <com.example.b00641907.mcnicholl_caravans.view.OpenSansTextView
+        android:id="@+id/submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:padding="@dimen/padding3"
+        android:text="Submit Order"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_7" />
 
 </LinearLayout>

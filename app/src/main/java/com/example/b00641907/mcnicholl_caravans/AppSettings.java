@@ -13,6 +13,8 @@ public class AppSettings {
     private SharedPreferences appSharedPrefs;
     private Editor prefsEditor;
     private String firebaseToken;
+    private String LAT = "LAT";
+    private String LNG = "LNG";
 
 
 
@@ -60,6 +62,24 @@ public class AppSettings {
     public String getFirebaseToken() {
         return appSharedPrefs.getString(FIREBASE_TOKEN,"");
     }
+
+    public String getDeviceLat() {
+        return appSharedPrefs.getString(LAT, "0.0");
+    }
+
+    public void setDeviceLat(String deviceLat) {
+        prefsEditor.putString(LAT, deviceLat);
+        prefsEditor.apply();
+    }
+
+    public String getDeviceLng() {
+        return appSharedPrefs.getString(LNG, "0.0");
+    }
+
+    public void setDeviceLng(String deviceLng) {
+        prefsEditor.putString(LNG, deviceLng);
+        prefsEditor.apply();
+    }
 }
-}
+
 

@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding1"
-            tools:text="Meeting with Sandeep dubey (sandeepdubey@gmail.com)"
+            tools:text="Meeting with Eoghan Wilkinson (eoghanwilk@gmail.com)"
             android:textColor="@color/app_grey"
             android:textSize="@dimen/font_8" />
 

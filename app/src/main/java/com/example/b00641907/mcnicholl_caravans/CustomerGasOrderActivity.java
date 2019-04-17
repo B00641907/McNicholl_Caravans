@@ -63,7 +63,7 @@ public class CustomerGasOrderActivity extends BaseActivity implements View.OnCli
         submit_order = findViewById(R.id.submit_order);
         gas_items_cart = new ArrayList<>();
         lvGas = findViewById(R.id.lvGas);
-        customerGasListAdapter = new CustomerGasListAdapter(mContext, gasInfoList,gas_items_cart, this);
+        customerGasListAdapter = new CustomerGasListAdapter(mContext, gasInfoList, gas_items_cart, this);
         lvGas.setAdapter(customerGasListAdapter);
         submit_order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -217,14 +217,14 @@ public class CustomerGasOrderActivity extends BaseActivity implements View.OnCli
                                 hideProgressDialog();
 
                                 if (databaseError == null) {
-                                    Intent i=new Intent(CustomerGasOrderActivity.this,AfterOrderActivity.class);
+                                    Intent i = new Intent(CustomerGasOrderActivity.this, AfterOrderActivity.class);
                                     try {
-                                        i.putExtra("id",transaction.getString("id"));
-                                        i.putExtra("status",transaction.getString("status"));
-                                        i.putExtra("type",transaction.getString("type"));
-                                        i.putExtra("currencyIsoCode",transaction.getString("currencyIsoCode"));
-                                        i.putExtra("amount",transaction.getString("amount"));
-                                        i.putExtra("items",gas_items_cart);
+                                        i.putExtra("id", transaction.getString("id"));
+                                        i.putExtra("status", transaction.getString("status"));
+                                        i.putExtra("type", transaction.getString("type"));
+                                        i.putExtra("currencyIsoCode", transaction.getString("currencyIsoCode"));
+                                        i.putExtra("amount", transaction.getString("amount"));
+                                        i.putExtra("items", gas_items_cart);
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
@@ -259,16 +259,15 @@ public class CustomerGasOrderActivity extends BaseActivity implements View.OnCli
     }
 
 
-
     @Override
     public void onQuantitySelected(int quantity, GasInfo itemInfo, Spinner spinnerGasAmount) {
-        if(getTotalQuantity(quantity)>2){
+        if (getTotalQuantity(quantity) > 2) {
             spinnerGasAmount.setSelection(0);
             Toast.makeText(mContext, "You can't select more than 2 bottles", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(quantity==0 && !gas_items_cart.contains(itemInfo)){
+        if (quantity == 0 && !gas_items_cart.contains(itemInfo)) {
             return;
         }
         itemInfo.amountSelected = itemInfo.getPricePerBox() * quantity;
@@ -290,12 +289,10 @@ public class CustomerGasOrderActivity extends BaseActivity implements View.OnCli
     }
 
     private int getTotalQuantity(int quantity) {
-        for(int i=0;i<gas_items_cart.size();i++){
-            GasInfo gasInfo=gas_items_cart.get(i);
-            quantity=quantity+(gasInfo.amountSelected/gasInfo.getPricePerBox() );
+        for (int i = 0; i < gas_items_cart.size(); i++) {
+            GasInfo gasInfo = gas_items_cart.get(i);
+            quantity = quantity + (gasInfo.amountSelected / gasInfo.getPricePerBox());
         }
         return quantity;
     }
-
-
 }
